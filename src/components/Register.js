@@ -37,7 +37,7 @@ function Register() {
         setLoader(true)
         e.preventDefault();
         if (data.email && data.password) {
-            const response = await fetch("http://localhost:8080/savedata", {
+            const response = await fetch("https://chatapp-lx3p.onrender.com/savedata", {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
