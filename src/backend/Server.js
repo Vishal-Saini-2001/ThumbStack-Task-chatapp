@@ -21,6 +21,8 @@ const SECRET_KEY = process.env.SECRET_KEY;
 const http = require('http');
 const socketIo = require('socket.io');
 const server = http.createServer(app);
+const io = socketIo(server);
+io.use(cors());
 app.use(cors());
 
 mongoose.connect(URI)
