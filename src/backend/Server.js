@@ -23,7 +23,7 @@ const socketIo = require('socket.io');
 const server = http.createServer(app);
 const io = socketIo(server);
 io.use(cors());
-app.use(cors());
+app.use(cors({origin:'*'}));
 
 mongoose.connect(URI)
 .then(log("MongoDB Connected"))
