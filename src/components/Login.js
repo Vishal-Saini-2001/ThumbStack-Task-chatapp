@@ -46,7 +46,7 @@ function Login() {
         setLoader(true)
         e.preventDefault();
         if (data.email && data.password) {
-            const response = await fetch("http://localhost:8080/login", {
+            const response = await fetch("https://chatapp-lx3p.onrender.com/login", {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
