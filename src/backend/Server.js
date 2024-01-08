@@ -73,14 +73,6 @@ app.post('/login',async(req,res)=>{
 
 })
 
-
-const corsOptions = {
-    origin:'https://thumb-stack-task-chatapp.vercel.app','https://thumb-stack-task-chatapp.vercel.app/login','https://thumb-stack-task-chatapp.vercel.app/chat',
-    methods: 'GET, POST',
-    credentials: true,
-};
-
-app.use(cors(corsOptions));
 // Socket IO Connections
 
 var activeUsers = [];
