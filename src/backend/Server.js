@@ -22,8 +22,18 @@ const http = require('http');
 const socketIo = require('socket.io');
 const server = http.createServer(app);
 const io = socketIo(server);
-io.use(cors());
-app.use(cors({origin:'*'}));
+
+const options = [
+  cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
+
+app.use(options);
+io.use(options);
 
 mongoose.connect(URI)
 .then(log("MongoDB Connected"))
