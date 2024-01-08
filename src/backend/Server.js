@@ -76,7 +76,7 @@ app.post('/login',async(req,res)=>{
 
 const io = socketIo(server, {
     cors: {
-      origin: 'http://localhost:3000', https://thumb-stack-task-chatapp.vercel.app/chat
+      origin: 'http://localhost:3000', https://thumb-stack-task-chatapp.vercel.app
       methods: ['GET', 'POST'],
     },
   });
